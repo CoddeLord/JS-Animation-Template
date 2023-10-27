@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.main {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), transparent), url(office.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    min-height: 8vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+}
+
+nav ul li {
+    line-height: 30px;
+}
+
+nav h1 {
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+    letter-spacing: 5px;
+    line-height: 30px;
+}
+
+.header {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%, -50%);
+    font-size: 3rem;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header::after {
+    position: absolute;
+    content: " ";
+    top: 95%;
+    left: 0%;
+    height: 1rem;
+    width: 100%;
+    padding: 2rem;
+    background-color: teal;
+    animation: moeline 5s ease-in;
+}
+
+ul li {
+    align-items: center;
+    overflow: hidden;
+}
+
+ul span{
+    transform: translateX(0%);
+    display: inline-flex;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    color:teal;
+}
+.description{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+p{
+    display: inline-block;
+    overflow: hidden;
+    text-align: justify;
+}
+
+@keyframes moveup{
+    
+    from{
+        opacity: 0;
+        transform: translateY(200px)
+    }to{
+        opacity: 1;
+        transform: translateY(0px)
+    }
+
+}
+
+@keyframes movetoleft{
+    
+    from{
+        opacity: 0;
+        transform: translateX(100px)
+    }to{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+
+}
+
+
+@keyframes moeline{
+    
+    from{
+        opacity: 0;
+        transform: translateX(100%)
+    }to{
+        opacity: 1;
+        transform: translateY(0%)
+    }
+
+}
